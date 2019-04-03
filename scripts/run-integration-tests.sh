@@ -9,7 +9,7 @@ export GOPATH=/eirini-release
 export PATH=$PWD/bin:$PATH
 
 rm -rf /tmp/*
-go install github.com/onsi/ginkgo/ginkgo
+go get github.com/onsi/ginkgo/ginkgo
 
 pushd src/code.cloudfoundry.org/eirini/integration/recipe
   ginkgo .
