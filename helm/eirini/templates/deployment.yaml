@@ -45,10 +45,7 @@ spec:
         image: eirini/opi-init:{{ .Values.opi.image_tag }}
         env:
         - name: "NATS_PASSWORD"
-          valueFrom:
-            secretKeyRef:
-              key: "nats-password"
-              name: "secrets-{{ .Values.scf.version }}-{{ .Values.scf.secrets_generation_counter }}"
+          value: "{{ .Values.secrets.NATS_PASSWORD }}"
         volumeMounts:
         - name: config-map-volume
           mountPath: /configs
