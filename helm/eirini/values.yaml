@@ -7,9 +7,9 @@ opi:
   namespace: eirini
   version: 0.0.0
   stager:
-    downloader_image: eirini/recipe-downloader:latest
-    uploader_image: eirini/recipe-uploader:latest
-    executor_image: eirini/recipe-executor:latest
+    downloader_image: nimak/recipe-downloader:latest
+    uploader_image: nimak/recipe-uploader:latest
+    executor_image: nimak/recipe-executor:latest
 
 kube:
   external_ips: []
