@@ -6,19 +6,19 @@ opi:
 
   namespace: eirini
   version: 0.0.0
-  init_image: eirini/opi-init
-  image: eirini/opi
+  init_image: nimak/opi-init
+  image: nimak/opi
   image_tag: latest
   rootfs_version: 24.0.0
   rootfs_tag: v24.0.0
   rootfs_patcher_timeout: -1ns
   stager:
     downloader_image: eirini/recipe-downloader
-    downloader_image_tag: 0.1.0
+    downloader_image_tag: latest
     executor_image: eirini/recipe-executor
-    executor_image_tag: 0.1.0
+    executor_image_tag: latest
     uploader_image: eirini/recipe-uploader
-    uploader_image_tag: 0.1.0
+    uploader_image_tag: latest
 kube:
   external_ips: []
 
