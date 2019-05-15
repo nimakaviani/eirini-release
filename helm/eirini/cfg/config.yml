@@ -21,10 +21,6 @@ secrets: &secrets
 services: &services
   loadbalanced: false
 
-scf:
-  version: 2.14.5
-  secrets_generation_counter: 1
-
 eirini:
   env:
     DOMAIN: *DOMAIN
@@ -36,14 +32,13 @@ eirini:
     #Enable if your cluster is using docker,
     #by default eirini will assume containerd
     use_docker: false
+    image_tag: latest
 
     namespace: eirini
-    version: 0.0.0
     init_image: nimak/opi-init
     image: nimak/opi
     image_tag: latest
     rootfs_version: 24.0.0
-    patcher_tag: ci-49.0.0
     rootfs_tag: v24.0.0
     rootfs_patcher_timeout: -1ns
     stager:
@@ -152,3 +147,4 @@ eirini:
       PfZ+G6Z6h7mjem0Y+iWlkYcV4PIWL1iwBi8saCbGS5jN2p8M+X+Q7UNKEkROb3N6
       KOqkqm57TH2H3eDJAkSnh6/DNFu0Qg==
       -----END CERTIFICATE-----
+

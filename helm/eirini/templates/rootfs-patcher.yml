@@ -15,7 +15,7 @@ spec:
         - --namespace={{ .Values.opi.namespace }}
         - --rootfs-version={{ .Values.opi.rootfs_version }}
         - --timeout={{ .Values.opi.rootfs_patcher_timeout }}
-        image: eirini/rootfs-patcher:{{ .Values.opi.image_tag }}
+        image: eirini/rootfs-patcher:{{ .Values.opi.patcher_tag }}
         imagePullPolicy: IfNotPresent
       restartPolicy: OnFailure
       serviceAccount: opi
